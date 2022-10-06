@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Basic counter use React Hook 
+
+## Project built to understand better how to use useState() hook
+
+Original tutorial : https://www.youtube.com/watch?v=O6P86uwfdR0&t=330s
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
