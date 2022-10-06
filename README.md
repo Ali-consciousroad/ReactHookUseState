@@ -4,6 +4,9 @@
 
 Original tutorial : https://www.youtube.com/watch?v=O6P86uwfdR0&t=330s
 
+* React Hook can be used only with function-based components. We can't use them with class-based components 
+* They can't be nested inside block of codes (Loop, if statements etc.)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
