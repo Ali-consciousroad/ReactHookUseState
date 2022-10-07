@@ -1,11 +1,6 @@
 // Use destructuring to import a single hook
 import React, { useState } from 'react';
 
-function countInitial() {
-  console.log('run function');
-  return 4;
-}
-
 function App() {
     /* 
   - useState is an array with 2 values 
@@ -16,26 +11,17 @@ function App() {
   we'll prefere to use seperate hook for each value! 
    */
   
-  const [state, setState] = useState({ count: 4, theme: "red" })
-  const count = state.count
-  const theme = state.theme
+  const [count, setCount] = useState(4)
+  const [theme, setTheme] = useState("red")
 
   function decrementCount(){
-    setState(prevState => {
-      /* 
-      How this work in class-based component but this won't work properly 
-      because instead of merging the old state with the new one, with function-based component, 
-      the old state is totally overwritten! To avoid this when working with objects,
-      we need to use to spread out the old state and keep all the old values. 
-      */
-
-      //return { count: prevState.count - 1 } // Overwrite the old values!
-      return { ...prevState, count: prevState.count - 1 }
-    })
+      setCount(prevCount => prevCount - 1)
+      setTheme("yellow")
   }
 
   function incrementCount(){
-    // setCount(prevCount => prevCount + 1)
+      setCount(prevCount => prevCount + 1)
+      setTheme("green")
   }
 
   return (
